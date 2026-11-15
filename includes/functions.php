@@ -72,3 +72,5 @@ function labelSisaHari(int $sisa): string
     if ($sisa === 0) return 'Hari ini';
     return abs($sisa) . ' hari lalu';
 }
+
+ini_syntax_error
