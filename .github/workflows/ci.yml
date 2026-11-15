@@ -1,0 +1,35 @@
+name: CI Pipeline - Apotek Tunas Sehat
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    name: Cek Sintaks PHP & Unit Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Checkout Kode Repository
+        uses: actions/checkout@v4
+
+      - name: 2. Setup Environment PHP 8.1
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          coverage: none
+
+      - name: 3. Verifikasi Lingkungan PHP
+        run: |
+          php -v
+          echo "Lingkungan PHP siap digunakan."
+
+      - name: 4. Build / Cek Sintaks Seluruh File PHP (Linting)
+        run: |
+          find . -name "*.php" -not -path "./apotek-monitoring/*" -exec php -l {} +
+
+      - name: 5. Jalankan Unit Test Logika Kedaluwarsa
+        run: |
+          php tests/test_fungsi.php
