@@ -73,4 +73,3 @@ function labelSisaHari(int $sisa): string
     return abs($sisa) . ' hari lalu';
 }
 
-ini_syntax_error
