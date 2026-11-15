@@ -18,7 +18,7 @@ date_default_timezone_set('Asia/Makassar');
 // Semua file halaman berada 2 folder di bawah root: modules/<nama>/file.php
 $scriptName = $_SERVER['SCRIPT_NAME'];
 if (strpos($scriptName, '/modules/') !== false) {
-    define('BASE_URL', rtrim(dirname($scriptName, 2), '/'));
+    define('BASE_URL', rtrim(dirname($scriptName, 2), '/'))
 } else {
     define('BASE_URL', rtrim(dirname($scriptName), '/'));
 }
