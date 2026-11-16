@@ -3,9 +3,12 @@
 Aplikasi berbasis web (PHP 8.1 & MySQL) untuk memantau status masa simpan batch obat (*Aman*, *Perhatian*, *Kritis*, dan *Kedaluwarsa*) yang dilengkapi dengan **Continuous Integration (CI) Pipeline** menggunakan **GitHub Actions**.
 
 ## Anggota Kelompok 7 & Pembagian Peran
-1. **Adhysti Putri (F5512510017)** — Inisialisasi repository, pembuatan skrip unit test (`tests/test_fungsi.php`), konfigurasi workflow CI (`.github/workflows/ci.yml`), serta simulasi pengujian *fail-to-pass* melalui Pull Request.
-2. **Siti Zahra R. Nulia (F5512510027)** — Validasi logika perhitungan status kedaluwarsa, pengujian *Pull Request*, dan peninjauan kode (*code review*).
-3. **Teodorus Dwi Putra Sarungu (F5512510029)** — Penyusunan dokumentasi `README.md`, pencatatan ringkasan error serta langkah perbaikan, dan pengumpulan bukti *run* pipeline.
+1. **Teodorus Dwi Putra Sarungu (F5512510029) — *Lead Developer & CI/DevOps Engineer***  
+   Inisialisasi repository, pembuatan skrip unit test (`tests/test_fungsi.php`), konfigurasi workflow CI (`.github/workflows/ci.yml`), simulasi pengujian *fail-to-pass* melalui Pull Request, serta *merge* ke cabang utama.
+2. **Adhysti Putri (F5512510017) — *QA & Code Reviewer***  
+   Penyusunan skenario uji batas (*edge cases*) status kedaluwarsa obat, verifikasi hasil *log* pengujian pada *Pull Request*, dan peninjauan struktur kode (*code review*).
+3. **Siti Zahra R. Nulia (F5512510027) — *Technical Writer & Documentation***  
+   Penyusunan dokumentasi `README.md` dan laporan praktikum, pencatatan ringkasan error serta langkah perbaikan (*troubleshooting*), serta pengumpulan bukti *run* pipeline.
 
 ## Alur Kerja CI Pipeline
 Setiap kali terjadi `push` atau `pull_request` ke cabang `main`, GitHub Actions menjalankan workflow `.github/workflows/ci.yml` secara otomatis dengan tahapan:
