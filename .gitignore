@@ -1,0 +1,19 @@
+# Sistem Operasi Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Konfigurasi Editor (VS Code)
+.vscode/
+*.code-workspace
+
+# Log & Cache
+*.log
+error_log
+.cache/
+
+# Environment & Backup Sementara
+.env
+*.bak
+*.tmp
+~$*
